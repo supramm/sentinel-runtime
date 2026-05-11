@@ -30,7 +30,7 @@ torch>=2.0.0,<3.0.0
 # joblib: Load pre-trained scikit-learn Isolation Forest model (if_app)
 # Alternative: pickle (built-in), but joblib preferred for sklearn models
 joblib>=1.3.0,<2.0.0
-
+scikit-learn>=1.3.0,<2.0.0
 # ── Interactive Visualizations ──────────────────────────────────────────────
 # Plotly: Cinematic glassmorphism dashboards in all three apps
 # Includes: graph_objects, express, subplots
