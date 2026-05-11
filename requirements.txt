@@ -1,0 +1,43 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# SentinelAI Runtime_Clean — DEPLOYMENT REQUIREMENTS (Minimal)
+# ══════════════════════════════════════════════════════════════════════════════
+# 
+# This is the MINIMAL dependency set for running Runtime_Clean Streamlit apps
+# in production (local or cloud). All packages here are REQUIRED for runtime.
+#
+# Created: May 11, 2026
+# Target: Python 3.11+, Streamlit Cloud, Linux/Windows/macOS
+#
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Core Web Framework ──────────────────────────────────────────────────────
+# Streamlit: UI framework for building interactive inference apps
+streamlit>=1.28.0,<2.0.0
+
+# ── Numerical Computing ─────────────────────────────────────────────────────
+# NumPy: Array operations, tensor reshaping for model inference
+# Constraint: Compatible with torch 2.3.0 (numpy < 2.0 recommended)
+numpy>=1.21.0,<2.0.0
+
+# ── Deep Learning (Inference Only) ──────────────────────────────────────────
+# PyTorch: Required for LSTM Autoencoder (lstm_app) and CNN-BiLSTM RUL (rul_app)
+# Note: Installation may require additional setup on Windows/GPU systems
+#       For CPU-only: pip install torch --index-url https://download.pytorch.org/whl/cpu
+#       For GPU (CUDA 11.8): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+torch>=2.0.0,<3.0.0
+
+# ── Data Serialization ──────────────────────────────────────────────────────
+# joblib: Load pre-trained scikit-learn Isolation Forest model (if_app)
+# Alternative: pickle (built-in), but joblib preferred for sklearn models
+joblib>=1.3.0,<2.0.0
+
+# ── Interactive Visualizations ──────────────────────────────────────────────
+# Plotly: Cinematic glassmorphism dashboards in all three apps
+# Includes: graph_objects, express, subplots
+plotly>=5.14.0,<6.0.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TOTAL: 5 external packages
+# Combined size: ~200-300 MB (depending on torch compilation)
+# Installation time: 2-5 minutes (depending on torch wheel availability)
+# ──────────────────────────────────────────────────────────────────────────────

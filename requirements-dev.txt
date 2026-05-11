@@ -1,0 +1,83 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# SentinelAI Runtime_Clean — OPTIONAL DEVELOPMENT REQUIREMENTS
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Additional packages for:
+# - Jupyter notebook exploration & analysis
+# - Model training & retraining
+# - Testing & debugging
+# - Documentation generation
+#
+# These are NOT needed for Streamlit app deployment
+# Use with: pip install -r requirements-dev.txt
+#
+# Created: May 11, 2026
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Base runtime requirements ──────────────────────────────────────────────
+# Include minimal deployment requirements
+-r requirements.txt
+
+# ── Jupyter & Notebooks ────────────────────────────────────────────────────
+# Jupyter: Interactive notebook environment for EDA and analysis
+jupyter>=1.0.0,<2.0.0
+ipykernel>=6.25.0
+ipywidgets>=8.1.0
+nbformat>=5.9.0
+
+# ── Data Processing & Manipulation ─────────────────────────────────────────
+# Pandas: DataFrames for data exploration, feature engineering
+pandas>=2.0.0,<3.0.0
+# SciPy: Scientific computing (statistics, signal processing)
+scipy>=1.10.0,<2.0.0
+
+# ── Machine Learning (Training Only) ────────────────────────────────────────
+# scikit-learn: Isolation Forest training, preprocessing, metrics
+# WARNING: Only needed for training IF notebooks. Not needed for inference.
+scikit-learn>=1.3.0,<2.0.0
+
+# ── Visualization & EDA ─────────────────────────────────────────────────────
+# Matplotlib: Static plots for papers/reports
+matplotlib>=3.7.0,<4.0.0
+# Seaborn: High-level statistical visualization
+seaborn>=0.12.0,<0.14.0
+
+# ── Deep Learning (Training Only) ───────────────────────────────────────────
+# torchvision: Computer vision utilities (if using any vision tasks)
+# NOTE: Usually not needed for inference-only Runtime_Clean
+# torchvision>=0.15.0,<1.0.0
+
+# ── Data Acquisition & Processing ──────────────────────────────────────────
+# ucimlrepo: Fetch UCI Machine Learning datasets (AI4I dataset)
+# datasets: HuggingFace datasets library (Petsteb, etc.)
+ucimlrepo>=0.0.7
+datasets>=2.14.0,<3.0.0
+
+# ── Utilities ──────────────────────────────────────────────────────────────
+# tqdm: Progress bars for data loading
+tqdm>=4.66.0
+# pyyaml: YAML configuration file support
+pyyaml>=6.0.0,<7.0.0
+# python-dotenv: Environment variable management
+python-dotenv>=1.0.0,<2.0.0
+
+# ── Code Quality & Testing ─────────────────────────────────────────────────
+# pytest: Unit testing framework
+pytest>=7.4.0,<8.0.0
+# black: Code formatter
+black>=23.0.0,<24.0.0
+# flake8: Linting
+flake8>=6.0.0,<7.0.0
+# mypy: Static type checker
+mypy>=1.5.0,<2.0.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# NOTE: Development dependencies are separated to keep deployment lean.
+#
+# For Streamlit Cloud or production:
+#   pip install -r requirements.txt
+#
+# For local development:
+#   pip install -r requirements-dev.txt
+#
+# ──────────────────────────────────────────────────────────────────────────────
