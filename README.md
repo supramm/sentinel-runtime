@@ -1,75 +1,203 @@
 
 <div align="center">
 
-# SentinelAI Runtime
+# SentinelAI
 
-High-performance predictive maintenance runtime infrastructure for anomaly detection and Remaining Useful Life estimation.
+### Industrial Predictive Maintenance Intelligence Platform
 
-Built as a fully deployable ML inference stack using Streamlit, PyTorch, and Scikit-Learn.
+A deployed industrial AI system for anomaly detection, temporal fault analysis, and Remaining Useful Life prediction.
 
 <br>
 
-[Isolation Forest Engine](https://sentinel-if-engine.streamlit.app/) •
-[LSTM Autoencoder Engine](https://sentinel-lstm-engine.streamlit.app/) •
-[RUL Prediction Engine](https://sentinel-rul-engine.streamlit.app/)
+<p align="center">
+
+<a href="https://sentinel-frontend-delta.vercel.app/">
+  <img src="https://img.shields.io/badge/Live%20Deployment-SentinelAI%20Frontend-00C2FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Deployment">
+</a>
+
+<a href="https://react.dev/">
+  <img src="https://img.shields.io/badge/React-Frontend-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+</a>
+
+<a href="https://vitejs.dev/">
+  <img src="https://img.shields.io/badge/Vite-Build%20System-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite">
+</a>
+
+<a href="https://www.typescriptlang.org/">
+  <img src="https://img.shields.io/badge/TypeScript-App-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+</a>
+
+<a href="https://streamlit.io/">
+  <img src="https://img.shields.io/badge/Streamlit-Runtime-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+</a>
+
+<a href="https://pytorch.org/">
+  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
+</a>
+
+<a href="https://scikit-learn.org/">
+  <img src="https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit Learn">
+</a>
+
+</p>
+
+<br>
+
+## [Launch SentinelAI Platform](https://sentinel-frontend-delta.vercel.app/)
+
+Production deployment featuring:
+Isolation Forest Anomaly Detection • LSTM Autoencoder Diagnostics • Remaining Useful Life Prediction
 
 </div>
 
 ---
 
-## Overview
+## Deployment Preview
 
-SentinelAI Runtime is the production inference layer powering a distributed predictive maintenance platform designed for industrial telemetry analysis.
+<p align="center">
+  <a href="https://sentinel-frontend-delta.vercel.app/">
+    <img width="1920" height="1080" alt="SentinelAI Frontend Preview" src="https://github.com/user-attachments/assets/c8b5d7c7-b35b-4bc0-a862-35fadb29e5ef" />
+  </a>
+</p>
 
-The system consists of three independently deployed ML engines:
-
-| Engine | Purpose | Core Model |
-|---|---|---|
-| IF Engine | Fast statistical anomaly detection | Isolation Forest |
-| LSTM Engine | Temporal anomaly reconstruction | LSTM Autoencoder |
-| RUL Engine | Remaining Useful Life prediction | CNN + BiLSTM |
-
-The repository is structured as a fully isolated runtime environment optimized for:
-- cloud deployment
-- reproducible inference
-- model portability
-- frontend integration
-- independent service scaling
+<p align="center">
+  <strong>Main Deployment:</strong>
+  <br>
+  <a href="https://sentinel-frontend-delta.vercel.app/">
+    https://sentinel-frontend-delta.vercel.app/
+  </a>
+</p>
 
 ---
 
-## Live Deployments
+## Live Runtime Engines
 
-| Service | URL |
-|---|---|
-| IF Engine | https://sentinel-if-engine.streamlit.app/ |
-| LSTM Engine | https://sentinel-lstm-engine.streamlit.app/ |
-| RUL Engine | https://sentinel-rul-engine.streamlit.app/ |
+The frontend integrates three independently deployed Streamlit runtime engines.
+
+| Engine | Live App | Purpose |
+|---|---|---|
+| Isolation Forest Engine | [Open IF Engine](https://sentinel-if-engine.streamlit.app/) | Statistical anomaly detection |
+| LSTM Autoencoder Engine | [Open LSTM Engine](https://sentinel-lstm-engine.streamlit.app/) | Temporal reconstruction anomaly detection |
+| RUL Prediction Engine | [Open RUL Engine](https://sentinel-rul-engine.streamlit.app/) | Remaining Useful Life estimation |
+
+---
+
+## Project Overview
+
+SentinelAI is a predictive maintenance platform built to analyze industrial telemetry and detect early signs of machine degradation.
+
+The system combines:
+
+- a React/Vite frontend deployed on Vercel
+- three Streamlit runtime engines deployed independently
+- trained ML and deep learning models
+- structured runtime assets for inference
+- dashboard-level visualization for operational monitoring
+
+The frontend acts as the main control surface, while the runtime engines handle model-specific inference workflows.
 
 ---
 
 ## System Architecture
 
 ```text
-GitHub Repository
-        │
-        ▼
-Streamlit Cloud Runtime Layer
-        │
-        ├── IF Anomaly Engine
-        ├── LSTM Reconstruction Engine
-        └── RUL Prediction Engine
-                │
-                ▼
-Frontend Dashboard Integration
+                          ┌────────────────────────────┐
+                          │   SentinelAI Frontend       │
+                          │   React + Vite + Vercel     │
+                          └──────────────┬─────────────┘
+                                         │
+                                         │ iframe integration
+                                         │
+              ┌──────────────────────────┼──────────────────────────┐
+              │                          │                          │
+              ▼                          ▼                          ▼
+┌────────────────────────┐   ┌────────────────────────┐   ┌────────────────────────┐
+│ Isolation Forest Engine│   │ LSTM Autoencoder Engine│   │ RUL Prediction Engine  │
+│ Streamlit + Scikit-Learn│  │ Streamlit + PyTorch    │   │ Streamlit + PyTorch    │
+└────────────────────────┘   └────────────────────────┘   └────────────────────────┘
 ````
 
 ---
 
-## Runtime Structure
+## Model Engines
+
+### Isolation Forest Engine
+
+The Isolation Forest runtime provides lightweight anomaly detection over processed telemetry features.
+
+Key functions:
+
+* anomaly score generation
+* threshold-based detection
+* feature-level fault indicators
+* fast runtime inference
+
+---
+
+### LSTM Autoencoder Engine
+
+The LSTM Autoencoder runtime detects temporal anomalies through reconstruction error.
+
+Key functions:
+
+* sequence reconstruction
+* reconstruction-error scoring
+* temporal degradation analysis
+* feature attribution visualization
+
+---
+
+### RUL Prediction Engine
+
+The RUL runtime estimates Remaining Useful Life using a deep temporal model.
+
+Key functions:
+
+* degradation trajectory analysis
+* CNN + BiLSTM prediction
+* RUL estimation
+* model output comparison against true values
+
+---
+
+## Screenshots
+
+### Frontend Dashboard
+
+<p align="center">
+  <img width="1920" height="1080" alt="Frontend Dashboard" src="https://github.com/user-attachments/assets/c8b5d7c7-b35b-4bc0-a862-35fadb29e5ef" />
+</p>
+
+---
+
+### Isolation Forest Engine
+
+<p align="center">
+  <img width="1920" height="1080" alt="Isolation Forest Engine" src="https://github.com/user-attachments/assets/e5301beb-a80c-431d-bbfb-15e57b650328" />
+</p>
+
+---
+
+### LSTM Autoencoder Engine
+
+<p align="center">
+  <img width="1920" height="1080" alt="LSTM Autoencoder Engine" src="https://github.com/user-attachments/assets/8d303d0f-c2f0-455e-a097-b1776aaa38e9" />
+</p>
+
+---
+
+### RUL Prediction Engine
+
+<p align="center">
+  <img width="1920" height="1080" alt="RUL Prediction Engine" src="https://github.com/user-attachments/assets/00781219-1c4d-4c8c-86bf-a54d710752e0" />
+</p>
+
+---
+
+## Repository Structure
 
 ```text
-Runtime_Clean/
+sentinel-runtime/
 │
 ├── apps/
 │   ├── if_app.py
@@ -82,172 +210,146 @@ Runtime_Clean/
 │   └── rul/
 │
 ├── data/
+│   └── processed/
+│
 ├── outputs/
+│   ├── results.json
+│   └── scenarios.json
+│
 ├── utils/
+│   └── path_manager.py
 │
 ├── requirements.txt
-└── requirements-dev.txt
+├── requirements-dev.txt
+└── README.md
 ```
 
 ---
 
-## Core Features
+## Tech Stack
 
-### Isolation Forest Engine
-
-* statistical anomaly scoring
-* engineered telemetry analysis
-* threshold-based fault detection
-* lightweight inference runtime
-
-### LSTM Autoencoder Engine
-
-* sequence reconstruction analysis
-* temporal degradation tracking
-* reconstruction-error visualization
-* deep anomaly representation learning
-
-### RUL Prediction Engine
-
-* Remaining Useful Life estimation
-* CNN + BiLSTM temporal modeling
-* degradation trajectory analysis
-* predictive maintenance forecasting
-
----
-
-## Technical Stack
-
-| Layer         | Technologies            |
-| ------------- | ----------------------- |
-| Runtime       | Python, Streamlit       |
-| Deep Learning | PyTorch                 |
-| ML Models     | Scikit-Learn            |
-| Visualization | Plotly                  |
-| Serialization | Joblib, NumPy           |
-| Deployment    | GitHub, Streamlit Cloud |
+| Layer         | Tools                           |
+| ------------- | ------------------------------- |
+| Frontend      | React, Vite, TypeScript         |
+| Runtime UI    | Streamlit                       |
+| ML Models     | Scikit-Learn, PyTorch           |
+| Data Handling | NumPy, Pandas, Joblib           |
+| Visualization | Plotly, Matplotlib              |
+| Deployment    | Vercel, Streamlit Cloud, GitHub |
 
 ---
 
 ## Deployment Design
 
-The runtime layer was intentionally separated from:
+SentinelAI is deployed as a modular system.
 
-* training pipelines
-* notebooks
-* experimental research code
-* frontend systems
+The frontend and model runtimes are separated intentionally:
 
-to create a production-oriented deployment architecture with:
+```text
+Frontend Repository
+        │
+        ▼
+Vercel Deployment
+        │
+        ▼
+User Interface + Embedded Runtime Apps
 
-* isolated inference services
-* centralized path management
-* portable runtime environments
-* GitHub-driven deployment workflows
+
+Runtime Repository
+        │
+        ▼
+Streamlit Cloud Deployments
+        │
+        ├── IF Engine
+        ├── LSTM AE Engine
+        └── RUL Engine
+```
+
+This makes the project easier to maintain because each model runtime can be updated independently without breaking the main frontend.
 
 ---
 
-## Local Development
+## Local Runtime Setup
 
-### Clone Repository
+Clone the runtime repository:
 
 ```bash
 git clone https://github.com/supramm/sentinel-runtime.git
 cd sentinel-runtime
 ```
 
-### Create Environment
-
-#### Windows
+Create and activate a virtual environment:
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-#### Linux / macOS
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Run Applications
-
-### IF Engine
+Run individual apps:
 
 ```bash
 streamlit run apps/if_app.py
-```
-
-### LSTM Engine
-
-```bash
 streamlit run apps/lstm_app.py
-```
-
-### RUL Engine
-
-```bash
 streamlit run apps/rul_app.py
 ```
 
 ---
 
-## Screenshots
-
-### IF Engine
-
-<!-- Insert screenshot -->
-
-<br>
-
-### LSTM Engine
-
-<!-- Insert screenshot -->
-
-<br>
-
-### RUL Engine
-
-<!-- Insert screenshot -->
-
----
-
 ## Deployment Notes
 
-* fully self-contained runtime architecture
-* centralized pathlib-based path management
-* Streamlit Cloud compatible
-* cross-platform deployment support
-* Python 3.11 recommended
-* GitHub-integrated redeployment workflow
+Important production decisions:
+
+* runtime apps are deployed separately on Streamlit Cloud
+* frontend is deployed separately on Vercel
+* Streamlit iframe links should use embed mode inside the frontend
+* model files and runtime assets are kept inside the runtime repository
+* local absolute paths were removed from deployment-critical files
+* broad Vercel rewrites were avoided to prevent static asset MIME errors
 
 ---
 
-## Future Expansion
+## Current Status
 
-* React/Vite monitoring dashboard
-* unified telemetry visualization layer
-* real-time inference streaming
-* multi-machine monitoring
-* cloud persistence layer
-* alerting and notification pipeline
-* distributed inference orchestration
+| Component                 | Status   |
+| ------------------------- | -------- |
+| Frontend deployment       | Live     |
+| IF Engine                 | Live     |
+| LSTM Autoencoder Engine   | Live     |
+| RUL Engine                | Live     |
+| GitHub runtime repository | Complete |
+| Streamlit deployment      | Complete |
+| Vercel deployment         | Complete |
+
+---
+
+## Links
+
+| Resource            | Link                                                                                 |
+| ------------------- | ------------------------------------------------------------------------------------ |
+| Main Frontend       | [sentinel-frontend-delta.vercel.app](https://sentinel-frontend-delta.vercel.app/)    |
+| IF Engine           | [sentinel-if-engine.streamlit.app](https://sentinel-if-engine.streamlit.app/)        |
+| LSTM Engine         | [sentinel-lstm-engine.streamlit.app](https://sentinel-lstm-engine.streamlit.app/)    |
+| RUL Engine          | [sentinel-rul-engine.streamlit.app](https://sentinel-rul-engine.streamlit.app/)      |
+| Runtime Repository  | [github.com/supramm/sentinel-runtime](https://github.com/supramm/sentinel-runtime)   |
+| Frontend Repository | [github.com/supramm/sentinel-frontend](https://github.com/supramm/sentinel-frontend) |
 
 ---
 
 <div align="center">
 
-Supram Kumar
-AI/ML Systems Engineering • Predictive Maintenance • Deep Learning Infrastructure
+## SentinelAI
+
+Industrial telemetry intelligence for predictive maintenance.
+
+<br>
+
+Built by **Supram Kumar**
 
 </div>
+
